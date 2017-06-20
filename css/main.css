@@ -1,0 +1,80 @@
+
+body {
+	background-image: url('../img/body-bg.gif');
+	background-repeat: repeat;
+	background-position: top center;
+	background-attachment: scroll;
+	font-family: 'Bad Script', cursive;
+
+}
+header {
+	background-color: #4d0c46;
+	border-bottom: 1px solid #000;
+	padding: 30px;
+}
+.logo {
+	color: #fff;
+	font-family: 'Lobster', cursive;
+}
+.navbar-item {
+    float: left;
+    width: 30%;
+    line-height: 4;
+    color: #16a68e;
+    text-align: center;
+}
+.navbar-item a {
+    line-height: 4;
+    color: #16a68e;
+    text-transform: uppercase;
+}
+.carousel, .carousel-inner, .item {
+	max-height: 500px; 
+}
+.section-heading {
+	font-size: 28px;
+	color: #16a68e;
+	text-transform: uppercase;
+	padding: 30px 15px;
+}
+.film-block {
+	height: 400px;
+	margin: 20px 0;
+	position: relative;
+	overflow: hidden;
+}
+.film-block-img {
+	height: 400px;
+	width: 100%;
+}
+.film-block-title {
+position: absolute;
+    top: 73%;
+    width: 80%;
+    line-height: 4;
+    padding: 10px;
+    left: 10%;
+    color: #fff;
+    background-color: rgba(72, 21, 88, 0.4);
+}
+.more {
+	text-align: center;
+	padding: 40px 20px;
+}
+.show-more {
+	font-size: 16px;
+	color: #473a34;
+	background-color: #16a68e;
+	font-weight: 700;
+}
+.film-block-new-img {
+	height: 100%;
+	width: auto;
+}
+.film-block-new, .film-block-new-img {
+	height: 200px;
+	text-align: center;
+}
+.film-block-new {
+	margin: 40px 0;
+}

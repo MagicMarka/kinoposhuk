@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Кінопошук</title>
+	<title>EasyFilmFinder</title>
 	<link href="https://fonts.googleapis.com/css?family=Bad+Script|Lobster&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -11,7 +11,7 @@
 	<header class="container-fluid">
 	<div class="row">
 			<div class="col-md-3 logo">
-				<h1>КіноРозвідка</h1>
+				<h1>EasyFilmFinder</h1>
 			</div>
 			<div class="col-md-9 text-center">
 				<ul class="nav nav-pills main-navigation text-center">
@@ -92,15 +92,19 @@
 		    		<input type="text" class="form-control" id="searchText" placeholder="Знайти фільм...">
 		    	</form>
 		    </div>
+
+    </div>
+        <div class="container">
+      <div id="movies" class="row"></div>
     </div>
 </section>
 <section class="popular">
-	<div class="container">
+	<div class="container" id="popular">
 		<div class="row">
 			<h4 class="section-heading">Популярні фільми</h4>
 		</div>
 		<div class="row">
-			<div class="col-md-3 film-block">
+			<div class="col-md-3 film-block" id="moviecontainer">
 				<img class="img-resopnsive film-block-img" src="img/mummy-poster.jpg">
 				<p class="film-block-title">
 					Mумія <span class="film-block-year">(2017)</span>
@@ -207,7 +211,9 @@
 	</div>
 	</div>
 </section>
+
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>

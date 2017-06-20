@@ -78,3 +78,7 @@ position: absolute;
 .film-block-new {
 	margin: 40px 0;
 }
+.show-movie {
+	position: absolute;
+	top: 80%;
+}

@@ -7,16 +7,16 @@ $(document).ready(function () {
 });
 
 function getMovies(searchText) {
-  axios.get('http://www.omdbapi.com/?s=' + searchText + '&apikey=bf276604').then(function (response) {
+  axios.get('https://api.themoviedb.org/3/search/movie?api_key=436fedae44d7b81338702a9341ae7a74&query=' + searchText).then(function (response) {
     console.log(response);
-    var movies = response.data.Search;
+    var movies = response.data.results;
     var output = '';
     $.each(movies, function (index, movie) {
       output += `
          <div class="col-md-3">
             <div class="film-block text-center">
-              <img src="${movie.Poster}">
-              <p class="film-block-title">${movie.Title}</p>
+              <img src="https://image.tmdb.org/t/p/w300${movie.poster_path}">
+              <p class="film-block-title">${movie.original_title}</p>
 
             </div>
           </div>
@@ -50,29 +50,29 @@ function getMovies(searchText) {
 //   });
 
 
-  var ids = ["tt0068646","tt0111161","tt0108052"];
+//   var ids = ["tt0068646","tt0111161","tt0108052"];
 
-getMoviesByimdbID(ids);
+// getMoviesByimdbID(ids);
 
-function getPopularMovies(){
-    axios.get('http://www.omdbapi.com/?s=' + ar[i] + '&apikey=bf276604').then(function (response) {
-    console.log(response);
-    var popularMovies = response.data.Search;
-    var popularOutput = '';
-    $.each(movies, function (index, movie) {
-      popularOutput += `
-         <div class="col-md-3">
-            <div class="film-block text-center">
-              <img src="${movie.Poster}">
-              <p class="film-block-title">${movie.Title}</p>
-            </div>
-          </div>
-        `;
-    });
+// function getPopularMovies(){
+//     axios.get('http://www.omdbapi.com/?s=' + ar[i] + '&apikey=bf276604').then(function (response) {
+//     console.log(response);
+//     var popularMovies = response.data.Search;
+//     var popularOutput = '';
+//     $.each(movies, function (index, movie) {
+//       popularOutput += `
+//          <div class="col-md-3">
+//             <div class="film-block text-center">
+//               <img src="${movie.Poster}">
+//               <p class="film-block-title">${movie.Title}</p>
+//             </div>
+//           </div>
+//         `;
+//     });
 
-    $('#popular').html(output);
-  }).catch(function (err) {
-    console.log(err);
-  });
+//     $('#popular').html(output);
+//   }).catch(function (err) {
+//     console.log(err);
+//   });
     
-}
+// }

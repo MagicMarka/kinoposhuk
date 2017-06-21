@@ -4,17 +4,18 @@ body {
 	background-repeat: repeat;
 	background-position: top center;
 	background-attachment: scroll;
-	font-family: 'Bad Script', cursive;
+	font-family: 'Montserrat', sans-serif;
 
 }
 header {
-	background-color: #4d0c46;
 	border-bottom: 1px solid #000;
 	padding: 30px;
 }
 .logo {
-	color: #fff;
+	color: #583d41;
 	font-family: 'Lobster', cursive;
+	text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+	letter-spacing: -2px;
 }
 .navbar-item {
     float: left;
@@ -25,7 +26,11 @@ header {
 }
 .navbar-item a {
     line-height: 4;
-    color: #16a68e;
+
+    font-weight: 800;
+color: rgba(0,0,0,0.6);
+text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
     text-transform: uppercase;
 }
 .carousel, .carousel-inner, .item {

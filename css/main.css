@@ -43,14 +43,16 @@ text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
 	padding: 30px 15px;
 }
 .film-block {
-	height: 400px;
+	width: 300px;
+	height: auto;
+	max-height: 450px;
 	margin: 20px 0;
 	position: relative;
 	overflow: hidden;
 }
 .film-block-img {
-	height: 400px;
-	width: 100%;
+	width: 300px;
+	height: auto;
 }
 .film-block-title {
 position: absolute;

@@ -7,7 +7,7 @@ $(document).ready(function () {
 });
 
 function getMovies(searchText) {
-  axios.get('https://api.themoviedb.org/3/search/movie?api_key=436fedae44d7b81338702a9341ae7a74&query=' + searchText).then(function (response) {
+  axios.get('https://api.themoviedb.org/3/search/movie?api_key=436fedae44d7b81338702a9341ae7a74&language=ua&query=' + searchText).then(function (response) {
     console.log(response);
     var movies = response.data.results;
     var output = '';

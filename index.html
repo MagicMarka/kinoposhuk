@@ -9,7 +9,7 @@
 </head>
 <body>
 	<header class="container-fluid">
-	<div class="row">
+		<div class="row">
 			<div class="col-md-3 logo">
 				<h1>КіноПошук</h1> 
 			</div>
@@ -22,7 +22,8 @@
 							<a href="#popular">Популярне</a>
 					</li>
 					<li class="navbar-item navbar-item-hasdropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" href="#genre">Жанри<span class="caret"></span></a>
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" href="#genre">Жанри
+							<span class="caret"></span></a>
 										<ul class="dropdown-menu navbar-dropdown">
 											<li class="navbar-dropdown-item">
 													<a href="#">Бойовик</a>
@@ -37,20 +38,19 @@
 					</li>
 				</ul>
 			</div>
-
+		</div>
 	</header>
 
 <section class="movie-search">
-		<div class="container">
-	    	<div class="movie-search-block">
-		    	<h3 class="text-center section-heading">Простий пошук фільмів</h3>
-		    	<form id="searchForm">
-		    		<input type="text" class="form-control" id="searchText" placeholder="Знайти фільм...">
-		    	</form>
-		    </div>
-
-    </div>
 	<div class="container">
+		<div class="row movie-search-block">
+			<div class="col-xs-12">
+			<h3 class="text-center section-heading">Простий пошук фільмів</h3>
+				<form id="searchForm">
+					<input type="text" class="form-control" id="searchText" placeholder="Знайти фільм...">
+				</form>
+				</div>
+		</div>
 		<div class="movie_container" id="movies"></div>
 	</div>
 </section>
@@ -75,61 +75,11 @@
 		<div class="row">
 			<h4 class="section-heading">Нові фільми</h4>
 		</div>
-		<div class="row" id="newMovies">
-			<div class="col-md-7">
-				<div class="row">
-					<div class="col-md-4 film-block-new">
-						<img class="img-resopnsive film-block-new-img" src="img/mummy-poster.jpg">
-						<p class="film-block-title">
-							Mумія <span class="film-block-year">(2017)</span>
-						</p>
-						<p class="film-block-genre">Екшен</p>
-					</div>
-					<div class="col-md-4 film-block-new">
-						<img class="img-resopnsive film-block-new-img" src="img/logan-poster.jpg">
-						<p class="film-block-title">
-							Логан: Росомаха <span class="film-block-year">(2017)</span>
-						</p>
-						<p class="film-block-genre">Екшен</p>
-					</div>
-					<div class="col-md-4 film-block-new">
-						<img class="img-resopnsive film-block-new-img" src="img/welness-poster.jpg">
-						<p class="film-block-title">
-							Ліки від щастя <span class="film-block-year">(2017)</span>
-						</p>
-						<p class="film-block-genre">Драма</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 film-block-new">
-						<img class="img-resopnsive film-block-new-img" src="img/2pac-poster.jpg">
-						<p class="film-block-title">
-							2pac: Легенда <span class="film-block-year">(2017)</span>
-						</p>
-						<p class="film-block-genre">Біографія</p>
-					</div>
-					<div class="col-md-4 film-block-new">
-						<img class="img-resopnsive film-block-new-img" src="img/beguiled-poster.jpg">
-						<p class="film-block-title">
-							2pac: Легенда <span class="film-block-year">(2017)</span>
-						</p>
-						<p class="film-block-genre">Біографія</p>
-					</div>
-					<div class="col-md-4 film-block-new">
-						<img class="img-resopnsive film-block-new-img" src="img/2pac-poster.jpg">
-						<p class="film-block-title">
-							2pac: Легенда <span class="film-block-year">(2017)</span>
-						</p>
-						<p class="film-block-genre">Біографія</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="more">
-						<button class="btn show-more">Завантажити ще</button>
-					</div>
-				</div>
+		<div class="row" >
+			<div class="col-md-6">
+				<div class="row" id="newMovies"></div>
 			</div>
-			<div class="col-md-5">
+			<div class="col-md-6">
 				<h3>Trailers</h3>
 				<div class="video">
 					<iframe width="100%" height="315" src="https://www.youtube.com/embed/3cxixDgHUYw" frameborder="0" allowfullscreen></iframe>
@@ -137,7 +87,7 @@
 			</div>
 		</div>
 	</div>
-	</div>
+
 </section>
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>

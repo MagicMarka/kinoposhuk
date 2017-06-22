@@ -17,7 +17,6 @@ function getMovies(searchText) {
             <div class="film-block text-center">
               <img src="https://image.tmdb.org/t/p/w300${movie.poster_path}">
               <p class="film-block-title">${movie.original_title}</p>
-
             </div>
           </div>
         `;

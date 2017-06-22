@@ -1,36 +1,30 @@
 
 body {
-	background-image: url('../img/body-bg.gif');
-	background-repeat: repeat;
-	background-position: top center;
-	background-attachment: scroll;
-	font-family: 'Montserrat', sans-serif;
-
+	background-color: #f4f4f4;
+	font-family: 'Roboto', sans-serif;
 }
 header {
-	border-bottom: 1px solid #000;
-	padding: 30px;
+	background-color: #fff;
 }
 .logo {
-	color: #583d41;
-	font-family: 'Lobster', cursive;
-	text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+	color: #ecd06f;
+	font-weight: 800;
+	text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
 	letter-spacing: -2px;
+}
+.main-navigation {
+	float: right;
+	padding: 0 20px;
 }
 .navbar-item {
     float: left;
-    width: 30%;
-    line-height: 4;
-    color: #16a68e;
+    color: #000;
     text-align: center;
 }
 .navbar-item a {
     line-height: 4;
-
-    font-weight: 800;
-color: rgba(0,0,0,0.6);
-text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
-                 0px -5px 35px rgba(255,255,255,0.3);
+    font-weight: 700;
+	color: #d4d4d4;
     text-transform: uppercase;
 }
 .carousel, .carousel-inner, .item {
@@ -38,9 +32,13 @@ text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
 }
 .section-heading {
 	font-size: 28px;
-	color: #16a68e;
+	color: #000;
 	text-transform: uppercase;
 	padding: 30px 15px;
+}
+.movie_container {
+	display: flex;
+	flex-wrap: wrap;
 }
 .film-block {
 	width: 300px;
@@ -53,16 +51,19 @@ text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
 .film-block-img {
 	width: 300px;
 	height: auto;
+	min-height: 450px;
+	max-height: 450px;
 }
 .film-block-title {
-position: absolute;
+	position: absolute;
     top: 73%;
     width: 80%;
-    line-height: 4;
+	min-height: 60px;
+	font-weight: 800;
     padding: 10px;
     left: 10%;
-    color: #fff;
-    background-color: rgba(72, 21, 88, 0.4);
+    color: #000;
+    background-color: rgba(255, 255,255, 0.4);
 }
 .more {
 	text-align: center;

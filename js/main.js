@@ -33,7 +33,7 @@ function getMovies(searchText) {
 //   window.location = 'movie.html';
 //   return false;
 // }
-
+  
 // function getMovie() {
 //   var movieId = sessionStorage.getItem('movieId');
 

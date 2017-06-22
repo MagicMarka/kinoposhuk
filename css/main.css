@@ -77,10 +77,13 @@ header {
 	padding: 40px 20px;
 }
 .show-more {
-	font-size: 16px;
-	color: #473a34;
-	background-color: #16a68e;
-	font-weight: 700;
+    border: 1px solid #000;
+    background: transparent;
+    color: #000;
+    padding: 13px 41px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin: 0 0 16px;
 }
 .film-block-new-img {
 	height: 100%;

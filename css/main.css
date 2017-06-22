@@ -17,9 +17,9 @@ header {
 	padding: 0 20px;
 }
 .navbar-item {
-    float: left;
-    color: #000;
-    text-align: center;
+	 float: left;
+	color: #000;
+	text-align: center;
 }
 .navbar-item a {
     line-height: 4;

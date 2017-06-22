@@ -13,9 +13,9 @@ function getMovies(searchText) {
     var output = '';
     $.each(movies, function (index, movie) {
       output += `
-         <div class="col-md-3">
+          <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="film-block text-center">
-              <img src="https://image.tmdb.org/t/p/w300${movie.poster_path}">
+              <img class="film-block-img" src="https://image.tmdb.org/t/p/w300${movie.poster_path}">
               <p class="film-block-title">${movie.original_title}</p>
             </div>
           </div>

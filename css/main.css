@@ -27,8 +27,14 @@ header {
 	color: #d4d4d4;
     text-transform: uppercase;
 }
+
 .carousel, .carousel-inner, .item {
 	max-height: 500px; 
+}
+.carousel-caption {
+	right: 60%;
+	color: #000;
+	background-color: rgba(224, 223, 214, 0.78);
 }
 .section-heading {
 	font-size: 28px;

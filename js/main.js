@@ -13,9 +13,9 @@ function getMovies(searchText) {
     var output = '';
     $.each(movies, function (index, movie) {
       output += `
-         <div class="col-md-3">
+          <div class="col-xs-12 col-sm-6 col-md-3 no-padding">
             <div class="film-block text-center">
-              <img src="https://image.tmdb.org/t/p/w300${movie.poster_path}">
+              <img class="film-block-img" src="https://image.tmdb.org/t/p/w300${movie.poster_path}">
               <p class="film-block-title">${movie.original_title}</p>
             </div>
           </div>
@@ -33,7 +33,7 @@ function getMovies(searchText) {
 //   window.location = 'movie.html';
 //   return false;
 // }
-
+  
 // function getMovie() {
 //   var movieId = sessionStorage.getItem('movieId');
 
@@ -49,29 +49,5 @@ function getMovies(searchText) {
 //   });
 
 
-//   var ids = ["tt0068646","tt0111161","tt0108052"];
-
-// getMoviesByimdbID(ids);
-
-// function getPopularMovies(){
-//     axios.get('http://www.omdbapi.com/?s=' + ar[i] + '&apikey=bf276604').then(function (response) {
-//     console.log(response);
-//     var popularMovies = response.data.Search;
-//     var popularOutput = '';
-//     $.each(movies, function (index, movie) {
-//       popularOutput += `
-//          <div class="col-md-3">
-//             <div class="film-block text-center">
-//               <img src="${movie.Poster}">
-//               <p class="film-block-title">${movie.Title}</p>
-//             </div>
-//           </div>
-//         `;
-//     });
-
-//     $('#popular').html(output);
-//   }).catch(function (err) {
-//     console.log(err);
-//   });
     
 // }

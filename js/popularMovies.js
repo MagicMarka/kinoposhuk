@@ -2,11 +2,7 @@ $(document).ready(function () {
 
 var popMovies = [],
 	pageNumber = 1,
-<<<<<<< HEAD
-	url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=436fedae44d7b81338702a9341ae7a74&page=' + pageNumber,
-=======
 	url = 'https://api.themoviedb.org/3/discover/movie?api_key=436fedae44d7b81338702a9341ae7a74&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&vote_average.gte=6&page=' + pageNumber,
->>>>>>> master
 	start = 0,
 	end = 4,
 	showMovies = function (popMovies, start, end) {

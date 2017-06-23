@@ -49,29 +49,5 @@ function getMovies(searchText) {
 //   });
 
 
-//   var ids = ["tt0068646","tt0111161","tt0108052"];
-
-// getMoviesByimdbID(ids);
-
-// function getPopularMovies(){
-//     axios.get('http://www.omdbapi.com/?s=' + ar[i] + '&apikey=bf276604').then(function (response) {
-//     console.log(response);
-//     var popularMovies = response.data.Search;
-//     var popularOutput = '';
-//     $.each(movies, function (index, movie) {
-//       popularOutput += `
-//          <div class="col-md-3">
-//             <div class="film-block text-center">
-//               <img src="${movie.Poster}">
-//               <p class="film-block-title">${movie.Title}</p>
-//             </div>
-//           </div>
-//         `;
-//     });
-
-//     $('#popular').html(output);
-//   }).catch(function (err) {
-//     console.log(err);
-//   });
     
 // }

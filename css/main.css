@@ -6,6 +6,14 @@ body {
 header {
 	background-color: #fff;
 }
+<<<<<<< HEAD
+=======
+footer {
+	background-color: #333;
+	margin-top: 8%;
+	padding: 15px;
+}
+>>>>>>> master
 .no-padding {
 	padding: 0;
 }
@@ -15,24 +23,35 @@ header {
 	text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
 	letter-spacing: -2px;
 }
+.footer-logo {
+	font-size: 16px;
+}
 .main-navigation {
 	float: right;
 	padding: 0 20px;
 }
 .navbar-item {
+<<<<<<< HEAD
 	 float: left;
+=======
+	float: left;
+>>>>>>> master
 	color: #000;
 	text-align: center;
 }
 .navbar-item a {
-    line-height: 4;
-    font-weight: 700;
+	line-height: 4;
+	font-weight: 700;
 	color: #d4d4d4;
+<<<<<<< HEAD
     text-transform: uppercase;
 }
 
 .carousel, .carousel-inner, .item {
 	max-height: 500px; 
+=======
+	text-transform: uppercase;
+>>>>>>> master
 }
 .carousel-caption {
 	right: 60%;
@@ -66,14 +85,23 @@ header {
 }
 .film-block-title {
 	position: absolute;
-    top: 73%;
-    width: 80%;
+	top: 73%;
+	width: 80%;
 	min-height: 60px;
 	font-weight: 800;
-    padding: 10px;
-    left: 10%;
-    color: #000;
-    background-color: rgba(255, 255,255, 0.4);
+	padding: 10px;
+	left: 10%;
+	color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(255, 255,255, 0.7);
+}
+
+.film-block-new-title {
+		color: #000;
+		font-weight: 800;
+		padding: 5px;
 }
 .more {
 	text-align: center;

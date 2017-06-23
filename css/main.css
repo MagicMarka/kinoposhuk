@@ -6,14 +6,11 @@ body {
 header {
 	background-color: #fff;
 }
-<<<<<<< HEAD
-=======
 footer {
 	background-color: #333;
 	margin-top: 8%;
 	padding: 15px;
 }
->>>>>>> master
 .no-padding {
 	padding: 0;
 }
@@ -31,11 +28,7 @@ footer {
 	padding: 0 20px;
 }
 .navbar-item {
-<<<<<<< HEAD
-	 float: left;
-=======
 	float: left;
->>>>>>> master
 	color: #000;
 	text-align: center;
 }
@@ -43,20 +36,7 @@ footer {
 	line-height: 4;
 	font-weight: 700;
 	color: #d4d4d4;
-<<<<<<< HEAD
-    text-transform: uppercase;
-}
-
-.carousel, .carousel-inner, .item {
-	max-height: 500px; 
-=======
 	text-transform: uppercase;
->>>>>>> master
-}
-.carousel-caption {
-	right: 60%;
-	color: #000;
-	background-color: rgba(224, 223, 214, 0.78);
 }
 .section-heading {
 	font-size: 28px;

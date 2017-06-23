@@ -65,7 +65,9 @@ $('#more_popular').click( function() {
 		start += 4;
 		end += 4;
 	}
+
 morePopularMovies(start,end);
+
 });
 
 });

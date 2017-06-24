@@ -12,11 +12,13 @@ function getMovies(searchText) {
     var movies = response.data.results;
     var output = '';
     $.each(movies, function (index, movie) {
+      var img = movie.poster_path;
       output += `
           <div class="col-xs-12 col-sm-6 col-md-3 no-padding">
             <div class="film-block text-center">
-              <img class="film-block-img" src="https://image.tmdb.org/t/p/w300${movie.poster_path}">
+              <img class="film-block-img" src="https://image.tmdb.org/t/p/w300${img}">
               <p class="film-block-title">${movie.original_title}</p>
+              <a class="btn show-more" href="#">Movie Details</a>
             </div>
           </div>
         `;
@@ -27,6 +29,8 @@ function getMovies(searchText) {
     console.log(err);
   });
 }
+
+
 
 // function movieSelected(id) {
 //   sessionStorage.setItem('movieId', id);

@@ -7,7 +7,7 @@ $(document).ready(function () {
 });
 
 function getMovies(searchText) {
-  axios.get('https://api.themoviedb.org/3/search/movie?api_key=436fedae44d7b81338702a9341ae7a74&language=ua&query=' + searchText).then(function (response) {
+  axios.get('https://api.themoviedb.org/3/search/multi?api_key=436fedae44d7b81338702a9341ae7a74&language=ua&query=' + searchText).then(function (response) {
     console.log(response);
     var movies = response.data.results;
     var output = '';
@@ -21,7 +21,13 @@ function getMovies(searchText) {
               </object>
               <img class="film-block-img" src="https://image.tmdb.org/t/p/w300${movie.poster_path}">
               <p class="film-block-title">${movie.original_title}</p>
-              <a id="infoBtn" class="btn show-more" href="#">Movie Details</a>
+             <div class="overlay">
+                <p class="film-descr-item"><strong>Title: </strong>${movie.title}</p>
+                <p class="film-descr-item"><strong>Release Date: </strong>${movie.release_date}</p>
+                <p class="film-descr-item"><strong>Rating: </strong>${movie.popularity}</p>
+                <p class="movie-info"><strong> Plot: </strong>${movie.overview}</p>
+                <button id="infoBtn" class="btn show-more">See more info</a>
+           </div>
             </div>
           </div>
         `;

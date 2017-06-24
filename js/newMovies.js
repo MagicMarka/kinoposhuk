@@ -7,7 +7,7 @@ function getNewMovies() {
   var newOutput = '';
   $.each(newMovies.slice(0,6), function (index, movie) {
     newOutput += `
-      <div class="col-xs-6 col-sm-4 col-md-4 no-padding" data-id=${movie.id}>
+      <div class="col-xs-6 col-sm-4 col-md-4 no-padding movie" data-id=${movie.id}>
         <div class="film-block-new text-center">
           <img class="film-block-new-img" src="https://image.tmdb.org/t/p/w154${movie.poster_path}">
           <p class="film-block-new-title">${movie.title}</p>

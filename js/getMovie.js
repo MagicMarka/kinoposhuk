@@ -18,9 +18,25 @@ $('#popular').on('click', '.movie', function(){
 	movieInfo(movieID);
 	castsInfo(movieID);
 $('#myModal').modal('show');
-
 });
-
+$('#movies').on('click', '.movie', function(){
+	movieID = $(this).data('id');
+	movieInfo(movieID);
+	castsInfo(movieID);
+$('#myModal').modal('show');
+});
+$('#new').on('click', '.movie', function(){
+	movieID = $(this).data('id');
+	movieInfo(movieID);
+	castsInfo(movieID);
+$('#myModal').modal('show');
+});
+$('#in_theatres').on('click', '.movie', function(){
+	movieID = $(this).data('id');
+	movieInfo(movieID);
+	castsInfo(movieID);
+$('#myModal').modal('show');
+});
 function movieInfo(movieID) {
 	axios.get('https://api.themoviedb.org/3/movie/' + movieID + '?api_key=436fedae44d7b81338702a9341ae7a74').then(function (response) {
 		movie = response.data;

@@ -33,27 +33,3 @@ function getMovies(searchText) {
 }
 
 
-
-// function movieSelected(id) {
-//   sessionStorage.setItem('movieId', id);
-//   window.location = 'movie.html';
-//   return false;
-// }
-  
-// function getMovie() {
-//   var movieId = sessionStorage.getItem('movieId');
-
-//   axios.get('http://www.omdbapi.com?i=' + movieId).then(function (response) {
-//     console.log(response);
-//     var movie = response.data;
-
-//     var output = '\n        <div class="row">\n          <div class="col-md-4">\n            <img src="' + movie.Poster + '" class="thumbnail">\n          </div>\n          <div class="col-md-8">\n            <h2>' + movie.Title + '</h2>\n            <ul class="list-group">\n              <li class="list-group-item"><strong>Genre:</strong> ' + movie.Genre + '</li>\n              <li class="list-group-item"><strong>Released:</strong> ' + movie.Released + '</li>\n              <li class="list-group-item"><strong>Rated:</strong> ' + movie.Rated + '</li>\n              <li class="list-group-item"><strong>IMDB Rating:</strong> ' + movie.imdbRating + '</li>\n              <li class="list-group-item"><strong>Director:</strong> ' + movie.Director + '</li>\n              <li class="list-group-item"><strong>Writer:</strong> ' + movie.Writer + '</li>\n              <li class="list-group-item"><strong>Actors:</strong> ' + movie.Actors + '</li>\n            </ul>\n          </div>\n        </div>\n        <div class="row">\n          <div class="well">\n            <h3>Plot</h3>\n            ' + movie.Plot + '\n            <hr>\n            <a href="http://imdb.com/title/' + movie.imdbID + '" target="_blank" class="btn btn-primary">View IMDB</a>\n            <a href="index.html" class="btn btn-default">Go Back To Search</a>\n          </div>\n        </div>\n      ';
-
-//     $('#movie').html(output);
-//   }).catch(function (err) {
-//     console.log(err);
-//   });
-
-
-    
-// }

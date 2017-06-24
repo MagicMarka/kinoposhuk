@@ -14,7 +14,7 @@ function getMovies(searchText) {
     $.each(movies, function (index, movie) {
       var img = movie.poster_path;
       output += `
-          <div class="col-xs-12 col-sm-6 col-md-3 no-padding">
+          <div class="col-xs-12 col-sm-6 col-md-3 no-padding" data-id=${movie.id}>
             <div class="film-block text-center">
               <object class="film-block-img" data="https://image.tmdb.org/t/p/w300${movie.poster_path}" type="image/jpg">
                  <img class="film-block-img"  src="img/default.png" />

@@ -11,6 +11,9 @@ footer {
 	margin-top: 8%;
 	padding: 15px;
 }
+.modal-content {
+	padding: 25px;
+}
 .no-padding {
 	padding: 0;
 }

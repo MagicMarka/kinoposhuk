@@ -18,12 +18,12 @@ $('#popular').on('click', '.movie', function(){
 	movieInfo(movieID);
 	castsInfo(movieID);
 $('#myModal').modal('show');
-$('#modalInner').html(modalContent);
+
 });
 
 function movieInfo(movieID) {
 	axios.get('https://api.themoviedb.org/3/movie/' + movieID + '?api_key=436fedae44d7b81338702a9341ae7a74').then(function (response) {
-		var movie = response.data;
+		movie = response.data;
 		genres = movie.genres;
 		poster = 'https://image.tmdb.org/t/p/w300' + movie.poster_path;
 		origTitle = movie.original_title;
@@ -31,6 +31,22 @@ function movieInfo(movieID) {
 		homepage = movie.homepage;
 		duration = movie.runtime;
 		tagline = movie.tagline;
+		modalContent = `
+			<div class="col-md-12">
+				<h4 class="modal-title text-center">${movie.original_title}</h4>
+				<p class="modal-title text-center"> ${movie.tagline}</p>
+			</div>
+			<div class="col-md-6">
+				<object class="film-block-img" data="https://image.tmdb.org/t/p/w300${movie.poster_path}" type="image/jpg">
+					<img class="film-block-img"  src="img/default.png" />
+				</object>
+			</div>
+			<div class="col-md-6">
+				<p> ${movie.overview}</p>
+			</div>
+			`;
+
+		$('#modalInner').html(modalContent);
 	})
 
 }
@@ -42,8 +58,5 @@ function castsInfo(movieID) {
 		console.log(casts);
 	});
 }
-	modalContent = `
-	<h4 class="modal-title">${origTitle}</h4>
-`;
 
 });

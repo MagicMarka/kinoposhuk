@@ -7,7 +7,7 @@ function getUpcomingMovies() {
   var output = '';
   $.each(upcomingMovies, function (index, movie) {
     output += `
-      <div class="col-xs-12 col-sm-6 col-md-6 no-padding">
+      <div class="col-xs-12 col-sm-6 col-md-6 no-padding" data-id=${movie.id}>
         <div class="film-block-new text-center">
           <img class="film-block-new-img" src="https://image.tmdb.org/t/p/w154${movie.poster_path}">
           <p class="film-block-new-title">${movie.title}</p>

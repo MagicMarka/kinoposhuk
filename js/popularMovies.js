@@ -26,7 +26,6 @@ function getPopularMovies(start, end) {
 					<object class="film-block-img" data="https://image.tmdb.org/t/p/w300${movie.poster_path}" type="image/jpg">
 						<img class="film-block-img"  src="img/default.png" />
 					</object>
-					<img class="film-block-img" src="https://image.tmdb.org/t/p/w300${movie.poster_path}">
 					<p class="film-block-title">${movie.title}</p>
 					<div class="overlay">
 						<p class="film-descr-item"><strong>Title: </strong>${movie.title}</p>

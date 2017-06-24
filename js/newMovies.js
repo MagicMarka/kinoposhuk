@@ -11,6 +11,9 @@ function getNewMovies() {
         <div class="film-block-new text-center">
           <img class="film-block-new-img" src="https://image.tmdb.org/t/p/w154${movie.poster_path}">
           <p class="film-block-new-title">${movie.title}</p>
+          <div class="overlay">
+            <button id="infoBtn" class="btn show-more-dark">See more info</a>
+          </div>
         </div>
       </div>
           `;

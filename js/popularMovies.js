@@ -9,7 +9,9 @@ var popMovies = [],
 		return popMovies.slice(start, end);
 ;
 	},
-	moreBtn = $('#more_popular');
+	moreBtn = $('#more_popular'),
+	infoBtn = $('#infoBtn'),
+	movie = {};
 
 
 function getPopularMovies(start, end) {
@@ -19,8 +21,11 @@ function getPopularMovies(start, end) {
 	
 	$.each(showMovies(popMovies, start, end), function (index, movie) {
 		popOutput += `
-			<div class="col-xs-12 col-sm-6 col-md-3 no-padding">
+			<div class="col-xs-12 col-sm-6 col-md-3 no-padding movie" data-id=${movie.id}>
 				<div class="film-block text-center">
+					<object class="film-block-img" data="https://image.tmdb.org/t/p/w300${movie.poster_path}" type="image/jpg">
+						<img class="film-block-img"  src="img/default.png" />
+					</object>
 					<img class="film-block-img" src="https://image.tmdb.org/t/p/w300${movie.poster_path}">
 					<p class="film-block-title">${movie.title}</p>
 					<div class="overlay">
@@ -28,7 +33,7 @@ function getPopularMovies(start, end) {
 						<p class="film-descr-item"><strong>Release Date: </strong>${movie.release_date}</p>
 						<p class="film-descr-item"><strong>Rating: </strong>${movie.popularity}</p>
 						<p class="movie-info"><strong> Plot: </strong>${movie.overview}</p>
-						<button class="btn btn-primary">See more info</a>
+						<button id="infoBtn" class="btn show-more">See more info</a>
 					</div>
 				</div>
 			</div>
@@ -38,6 +43,7 @@ function getPopularMovies(start, end) {
 		}).catch(function (err) {
 			console.log(err);
 			});
+
 };
 
 getPopularMovies(start, end);

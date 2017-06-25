@@ -145,3 +145,8 @@ footer {
 .overlay:hover {
 	opacity: 1;
 }
+.actor {
+	display: flex;
+	align-items: center;
+	padding: 5px;
+}

@@ -50,9 +50,9 @@ function movieInfo(movieID) {
 		duration = movie.runtime;
 		tagline = movie.tagline;
 		modalContent = `
-			<div class="col-md-12">
-				<h4 class="modal-title text-center">${movie.original_title}</h4>
-				<p class="modal-title text-center"> ${movie.tagline}</p>
+			<div class="col-md-12 modal-title text-center">
+				<h2>${movie.original_title}</h2>
+				<p> ${movie.tagline}</p>
 			</div>
 			<div class="col-md-5">
 				<object class="film-block-img" data="https://image.tmdb.org/t/p/w300${movie.poster_path}" type="image/jpg">
@@ -61,9 +61,11 @@ function movieInfo(movieID) {
 			</div>
 			<div class="col-md-7">
 				<div class="full-info">
-					<p id="genres">Genre: </p>
-					<p>Release date: ${movie.release_date}</p>
-					<p>Duration: ${movie.runtime} minutes </p>
+					<h2>Genre: </h2>
+					<p id="genres"> </p>
+					<p><strong>Release date:</strong> ${movie.release_date}</p>
+					<p><strong>Duration: </strong> ${movie.runtime} minutes </p>
+					<h3>Storyline</h3>
 					<p> ${movie.overview}</p>
 					
 				</div>

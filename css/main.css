@@ -150,3 +150,18 @@ footer {
 	align-items: center;
 	padding: 5px;
 }
+.modal-title {
+	// border: 2px solid #ecd06f;
+	margin-bottom: 5px;
+}
+.modal-title h2 {
+	color: #ecd06f;
+	text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+object.film-block-img {
+		 box-shadow: 0 7px 43px -3px rgba(0, 0, 0, 0.45);
+}
+.full-info {
+	box-shadow: 0 7px 43px -3px rgba(0, 0, 0, 0.45);
+	padding: 15px;
+}

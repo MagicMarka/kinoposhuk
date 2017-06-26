@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 var popMovies = [],
 	pageNumber = 1,
-	getUrl = () => 'https://api.themoviedb.org/3/discover/movie?api_key=436fedae44d7b81338702a9341ae7a74&sort_by=popularity.desc&vote_average.gte=6&page=' + pageNumber;
+	getUrl = () => 'https://api.themoviedb.org/3/discover/movie?api_key=436fedae44d7b81338702a9341ae7a74&sort_by=popularity.desc&vote_average.gte=7&page=' + pageNumber;
 	start = 0,
 	end = 4,
 	showMovies = function (popMovies, start, end) {

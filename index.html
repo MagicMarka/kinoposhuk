@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>КіноПошук</title>
+	<title>MovieFinder</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -11,28 +11,28 @@
 	<header class="container-fluid">
 		<div class="row">
 			<div class="col-md-3 logo">
-				<h1>КіноПошук</h1> 
+				<h1>MovieFinder</h1> 
 			</div>
 			<div class="col-md-9 text-center">
 				<ul class="nav nav-pills main-navigation text-center">
 					<li class="navbar-item">
-							<a href="#new">Нове</a>
+							<a href="#new">New</a>
 					</li>
 					<li class="navbar-item">
-							<a href="#popular">Популярне</a>
+							<a href="#popular">Popular</a>
 					</li>
 					<li class="navbar-item navbar-item-hasdropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" href="#genre">Жанри
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" href="#genre">Genres
 							<span class="caret"></span></a>
 										<ul class="dropdown-menu navbar-dropdown">
 											<li class="navbar-dropdown-item">
-													<a href="#">Бойовик</a>
+													<a href="#">Action</a>
 											</li>
 											<li class="navbar-dropdown-item">
-													<a href="#">Драма</a>
+													<a href="#">Drama</a>
 											</li>
 											<li class="navbar-dropdown-item">
-													<a href="#">Комедія</a>
+													<a href="#">Comedy</a>
 												</li>
 										</ul>
 					</li>
@@ -45,19 +45,20 @@
 	<div class="container">
 		<div class="row movie-search-block">
 			<div class="col-xs-12">
-			<h3 class="text-center section-heading">Простий пошук фільмів</h3>
+			<h3 class="text-center section-heading">Easy movie finder</h3>
 				<form id="searchForm">
-					<input type="text" class="form-control" id="searchText" placeholder="Знайти фільм...">
+					<input type="text" class="form-control" id="searchText" placeholder="Find a movie...">
 				</form>
 				</div>
 		</div>
 		<div class="movie_container" id="movies"></div>
 	</div>
 </section>
+
 <section class="popular">
 	<div class="container">
 		<div class="row">
-			<h4 class="section-heading">Популярні фільми</h4>
+			<h4 class="section-heading">Popular movies</h4>
 		</div>
 		<div class="row" id="popular">
 		</div>
@@ -65,46 +66,47 @@
 	<div class="container">
 		<div class="row">
 			<div class="more">
-				<button id="more_popular" class="btn show-more">Завантажити ще</button>
+				<button id="more_popular" class="btn show-more">Load more</button>
 			</div>
 		</div>
 	</div>
 </section>
+
 <section  id="new">
 	<div class="container">
 		<div class="row">
-			<h4 class="section-heading">Нові фільми</h4>
+			<h4 class="section-heading">New movies</h4>
 		</div>
 		<div class="row">
 			<div class="col-md-6">
-				<h3 class="text-center">Прем'єри</h3>
+				<h3 class="text-center">Premieres</h3>
 				<div class="row" id="newMovies"></div>
 			</div>
 			<div class="col-md-6">
-				<h3 class="text-center">В кінотеатрах</h3>
+				<h3 class="text-center">In cinemas</h3>
 				<div class="row text-center" id="in_theatres">
-					
 				</div>
 			</div>
 		</div>
 	</div>
-
 </section>
+
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModal">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	<div class="modal-dialog modal-lg" role="document">
+	<div class="modal-content">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 		<div class="row" id="modalInner">
 			
 		</div>
-    </div>
-  </div>
+	</div>
+	</div>
 </div>
+
 <footer>
 <div class="container">
 	<div class="row">
 		<div class="col-md-3 logo footer-logo">
-			<h1>КіноПошук</h1> 
+			<h1>MovieFinder</h1> 
 		</div>
 		<div class="col-md-6"></div>
 		<div class="col-md-3 text-right">
@@ -115,6 +117,7 @@
 	</div>
 	</div>
 </footer>
+
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -123,5 +126,6 @@
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/movies_in_theaters.js"></script>
 	<script type="text/javascript" src="js/getMovie.js"></script>
+	
 </body>
 </html>

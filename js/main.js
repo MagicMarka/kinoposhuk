@@ -33,9 +33,12 @@ function getMovies(searchText) {
     });
 
     $('#movies').html(output);
+
   }).catch(function (err) {
     console.log(err);
   });
+
+  
 }
 
 

@@ -91,8 +91,8 @@ function castsInfo(movieID) {
 		$.map(casts, function(movie) {
 			actors = `
 			<div class="col-md-6 actor">
-				<img src="https://image.tmdb.org/t/p/w185${movie.profile_path}" alt="" />
-				<p>${movie.name}  as ${movie.character}</p>
+				<img src="https://image.tmdb.org/t/p/w92${movie.profile_path}" alt="" />
+				<p>${movie.name}  <br> ${movie.character}</p>
 				</div>`
 			$('#casts').append(actors);
 		})

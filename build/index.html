@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MovieFinder</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=cyrillic" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+	
+<link href="styles.css" rel="stylesheet"></head>
+<body>
+	<header class="container-fluid">
+		<div class="row">
+			<div class="col-md-3 logo">
+				<h1>MovieFinder</h1> 
+			</div>
+			<div class="col-md-9 text-center">
+				<ul class="nav nav-pills main-navigation text-center">
+					<li class="navbar-item">
+							<a href="#new">New</a>
+					</li>
+					<li class="navbar-item">
+							<a href="#popular">Popular</a>
+					</li>
+					<li class="navbar-item navbar-item-hasdropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" href="#genre">Genres
+							<span class="caret"></span></a>
+										<ul class="dropdown-menu navbar-dropdown">
+											<li class="navbar-dropdown-item">
+													<a href="#action-block">Action</a>
+											</li>
+											<li class="navbar-dropdown-item">
+													<a href="#drama-block">Drama</a>
+											</li>
+											<li class="navbar-dropdown-item">
+													<a href="#comedy-block">Comedy</a>
+												</li>
+										</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+<section class="movie-search">
+	<div class="container">
+		<div class="row movie-search-block">
+			<div class="col-xs-12">
+			<h3 class="text-center section-heading">Easy movie finder</h3>
+				<form id="searchForm">
+					<input type="text" class="form-control" id="searchText" placeholder="Find a movie...">
+					 <button type="submit" class="btn btn-submit"><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
+				</form>
+				</div>
+		</div>
+		<div class="movie_container" id="movies"></div>
+	</div>
+</section>
+
+<section class="popular">
+	<div class="container">
+		<div class="row">
+			<h4 class="section-heading">Popular movies</h4>
+		</div>
+		<div class="row" id="popular">
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="more">
+				<button id="more_popular" class="btn show-more">Load more</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section  id="new">
+	<div class="container">
+		<div class="row">
+			<h4 class="section-heading">New movies</h4>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<h3 class="text-center">Premieres</h3>
+				<div class="row" id="newMovies"></div>
+			</div>
+			<div class="col-md-6">
+				<h3 class="text-center">In cinemas</h3>
+				<div class="row text-center" id="in_theatres">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="genres">
+	<div class="container">
+		<div class="row">
+			<h4 class="section-heading">Most popular by genre</h4>
+		</div>
+		<div class="row">
+			<div class="col-md-12" id="action-block">
+				<h3 class="text-left">Action</h3>
+				<div class="row" id="action"></div>
+			</div>
+			<div class="col-md-12" id="drama-block">
+				<h3 class="text-left">Drama</h3>
+				<div class="row text-center" id="drama">
+				</div>
+			</div>
+			<div class="col-md-12" id="comedy-block">
+				<h3 class="text-left">Comedy</h3>
+				<div class="row text-center" id="comedy">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModal">
+	<div class="modal-dialog modal-lg" role="document">
+	<div class="modal-content">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<div class="row" id="modalInner">
+			
+		</div>
+	</div>
+	</div>
+</div>
+
+<footer>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 logo footer-logo">
+			<h1>MovieFinder</h1> 
+		</div>
+		<div class="col-md-6"></div>
+		<div class="col-md-3 text-right">
+			<a href="https://www.themoviedb.org/">
+			<img src="img/mdb-logo.png">
+			</a>
+		</div>
+	</div>
+	</div>
+</footer>
+
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>

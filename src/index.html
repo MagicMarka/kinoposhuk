@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>MovieFinder</title>
+	<title><%= htmlWebpackPlugin.options.title %></title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+	
 </head>
 <body>
 	<header class="container-fluid">
@@ -26,13 +31,13 @@
 							<span class="caret"></span></a>
 										<ul class="dropdown-menu navbar-dropdown">
 											<li class="navbar-dropdown-item">
-													<a href="#">Action</a>
+													<a href="#action-block">Action</a>
 											</li>
 											<li class="navbar-dropdown-item">
-													<a href="#">Drama</a>
+													<a href="#drama-block">Drama</a>
 											</li>
 											<li class="navbar-dropdown-item">
-													<a href="#">Comedy</a>
+													<a href="#comedy-block">Comedy</a>
 												</li>
 										</ul>
 					</li>
@@ -48,6 +53,7 @@
 			<h3 class="text-center section-heading">Easy movie finder</h3>
 				<form id="searchForm">
 					<input type="text" class="form-control" id="searchText" placeholder="Find a movie...">
+					 <button type="submit" class="btn btn-submit"><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
 				</form>
 				</div>
 		</div>
@@ -91,6 +97,31 @@
 	</div>
 </section>
 
+
+<section class="genres">
+	<div class="container">
+		<div class="row">
+			<h4 class="section-heading">Most popular by genre</h4>
+		</div>
+		<div class="row">
+			<div class="col-md-12" id="action-block">
+				<h3 class="text-left">Action</h3>
+				<div class="row" id="action"></div>
+			</div>
+			<div class="col-md-12" id="drama-block">
+				<h3 class="text-left">Drama</h3>
+				<div class="row text-center" id="drama">
+				</div>
+			</div>
+			<div class="col-md-12" id="comedy-block">
+				<h3 class="text-left">Comedy</h3>
+				<div class="row text-center" id="comedy">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModal">
 	<div class="modal-dialog modal-lg" role="document">
 	<div class="modal-content">
@@ -118,14 +149,5 @@
 	</div>
 </footer>
 
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/popularMovies.js"></script>
-	<script type="text/javascript" src="js/newMovies.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/movies_in_theaters.js"></script>
-	<script type="text/javascript" src="js/getMovie.js"></script>
-	
 </body>
 </html>

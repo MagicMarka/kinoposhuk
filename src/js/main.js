@@ -1,3 +1,15 @@
+require('./../../node_modules/jquery/dist/jquery.min.js');
+require('./../../node_modules/bootstrap/dist/js/bootstrap.min.js');
+require('./../slick/slick.min.js');
+
+
+import { $ } from './utils';
+import axios from 'axios';
+
+
+
+import './../css/main.css';
+
 $(document).ready(function () {
   $('#searchForm').on('submit', function (e) {
     var searchText = $('#searchText').val();
@@ -33,12 +45,11 @@ function getMovies(searchText) {
     });
 
     $('#movies').html(output);
-
+    $('#searchForm')[0].reset();
   }).catch(function (err) {
     console.log(err);
   });
 
-  
 }
 
 

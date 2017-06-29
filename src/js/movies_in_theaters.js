@@ -1,9 +1,13 @@
+import { $ } from './utils';
+import axios from 'axios';
+
+
 $(document).ready(function () {
 
 function getUpcomingMovies() {
   axios.get('https://api.themoviedb.org/3/movie/upcoming?api_key=436fedae44d7b81338702a9341ae7a74&language=ua-UA&page=1&region=UA').then(function (response) {
   console.log(response);
-  upcomingMovies = response.data.results.slice(0,4);
+  var upcomingMovies = response.data.results.slice(0,4);
   var output = '';
   $.each(upcomingMovies, function (index, movie) {
     output += `
@@ -22,7 +26,7 @@ function getUpcomingMovies() {
     }).catch(function (err) {
       console.log(err);
       });
-    infoBtn.click
+    
 };
 
 getUpcomingMovies();

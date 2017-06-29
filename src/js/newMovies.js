@@ -1,3 +1,6 @@
+import { $ } from './utils';
+import axios from 'axios';
+
 $(document).ready(function () {
 
 function getNewMovies() {

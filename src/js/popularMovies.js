@@ -12,21 +12,7 @@ var popMovies = [],
 		return popMovies.slice(start, end);
 	},
 	moreBtn = $('#more_popular'),
-	infoBtn = $('#infoBtn'),
 	movie = {};
-// function ratingStars() {
-// 	$.fn.stars = function() {
-// 	return $(this).each(function() {
-// 	var rating = $(this).data("rating");
-// 	var numStars = $(this).data("numStars");
-// 	var fullStar = new Array(Math.floor(rating + 1)).join('<i class="fa fa-star"></i>');
-// 	var halfStar = ((rating%1) !== 0) ? '<i class="fa fa-star-half-empty"></i>': '';
-// 	var noStar = new Array(Math.floor(numStars + 1 - rating)).join('<i class="fa fa-star-o"></i>');
-// 		$(this).html(fullStar + halfStar + noStar);
-// 		});
-// 	}
-// 	$('.stars').stars();
-// }
 
 function getPopularMovies(start, end) {
 	let popOutput = '';
@@ -44,7 +30,6 @@ function getPopularMovies(start, end) {
 					<div class="overlay">
 						<p class="film-descr-item"><strong>Title: </strong>${movie.title}</p>
 						<p class="film-descr-item"><strong>Release Date: </strong>${movie.release_date}</p>
-						<p class="film-descr-item"><strong>Vote average: </strong>${movie.vote_average}/10</p>
 						<span class="stars" data-rating="${movie.vote_average}" data-num-stars="10" ></span>
 							<script>
 							$.fn.stars = function() {
@@ -59,8 +44,8 @@ function getPopularMovies(start, end) {
 							}
 							$('.stars').stars();
 						</script>
-						<p class="movie-info"><strong> Plot: </strong>${movie.overview}</p>
-						<button id="infoBtn" class="btn show-more">See more info</a>
+						<p class="movie-info">${movie.overview}</p>
+						<button id="infoBtn" class="btn show-more-dark">See more info</a>
 					</div>
 				</div>
 			</div>

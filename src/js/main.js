@@ -34,9 +34,21 @@ function getMovies(searchText) {
             <div class="overlay">
               <p class="film-descr-item"><strong>Title: </strong>${movie.title}</p>
               <p class="film-descr-item"><strong>Release Date: </strong>${movie.release_date}</p>
-              <p class="film-descr-item"><strong>Rating: </strong>${movie.popularity}</p>
-              <p class="movie-info"><strong> Plot: </strong>${movie.overview}</p>
-              <button id="infoBtn" class="btn show-more">See more info</a>
+          <p> <span class="stars" data-rating="${movie.vote_average}" data-num-stars="10" ></span> </p>
+              <script>
+              $.fn.stars = function() {
+              return $(this).each(function() {
+              var rating = $(this).data("rating");
+              var numStars = $(this).data("numStars");
+              var fullStar = new Array(Math.floor(rating + 1)).join('<i class="fa fa-star"></i>');
+              var halfStar = ((rating%1) !== 0) ? '<i class="fa fa-star-half-empty"></i>': '';
+              var noStar = new Array(Math.floor(numStars + 1 - rating)).join('<i class="fa fa-star-o"></i>');
+                $(this).html(fullStar + halfStar + noStar);
+                });
+              }
+              $('.stars').stars();
+            </script>
+              <button id="infoBtn" class="btn show-more-dark">See more info</a>
             </div>
           </div>
             </div>

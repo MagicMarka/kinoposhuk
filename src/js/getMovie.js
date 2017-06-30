@@ -43,6 +43,21 @@ function getMovieInfo(movieID) {
 					<p><strong>Duration: </strong> ${movie.runtime} minutes </p>
 					<h3>Storyline</h3>
 					<p> ${movie.overview}</p>
+					<h3>Rating</h3>
+					<p> <span class="stars" data-rating="${movie.vote_average}" data-num-stars="10" ></span> </p>
+							<script>
+							$.fn.stars = function() {
+							return $(this).each(function() {
+							var rating = $(this).data("rating");
+							var numStars = $(this).data("numStars");
+							var fullStar = new Array(Math.floor(rating + 1)).join('<i class="fa fa-star"></i>');
+							var halfStar = ((rating%1) !== 0) ? '<i class="fa fa-star-half-empty"></i>': '';
+							var noStar = new Array(Math.floor(numStars + 1 - rating)).join('<i class="fa fa-star-o"></i>');
+								$(this).html(fullStar + halfStar + noStar);
+								});
+							}
+							$('.stars').stars();
+						</script>
 				</div>
 			</div>
 			<div class="col-md-12 img-slider" id="images">
@@ -60,11 +75,15 @@ function getMovieInfo(movieID) {
 			var genre = `<a id="genre" class="genre" data-target="#myModal" href=#${genre.name}-block>${genre.name} </a> /`;
 			$('#genres').append(genre);
 		});
-		$('#genre').on('click', function(e) {
-			e.preventDefault;
-		$('#myModal').modal('hide');
-		console.log('lol')
+$('#genre').on('click', function(e) {
+	e.preventDefault;
+	var id  = $(this).attr('href'),
+	top = $(id).offset().top;
+	$('#myModal').modal('hide');
+	$('body,html').animate({scrollTop: top}, 1500);
+		
 	});
+
 	})
 }
 

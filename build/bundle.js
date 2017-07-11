@@ -1044,7 +1044,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 	    movie = {},
 	    modalContent = '';
 
-	(0, _utils.$)('#movies, #popular, #new, #in_theatres, #action, #drama').on('click', '.movie', function () {
+	(0, _utils.$)('#movies, #popular, #new, #in_theatres, #action, #drama, #comedy').on('click', '.movie', function () {
 		(0, _utils.$)('#myModal').modal('show');
 		movieID = (0, _utils.$)(this).data('id');
 		getMovieInfo(movieID);
@@ -1059,20 +1059,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 			console.log(movie);
 			var genres = movie.genres;
 			modalContent = '\n\t\t\t<div class="col-md-12 modal-title text-center">\n\t\t\t\t<h2>' + movie.original_title + '</h2>\n\t\t\t\t<p> ' + movie.tagline + '</p>\n\t\t\t</div>\n\t\t\t<div class="col-md-5">\n\t\t\t\t<object class="film-block-img" data="https://image.tmdb.org/t/p/w300' + movie.poster_path + '" type="image/jpg">\n\t\t\t\t\t<img class="film-block-img"  src="img/default.png" />\n\t\t\t\t</object>\n\t\t\t</div>\n\t\t\t<div class="col-md-7">\n\t\t\t\t<div class="full-info">\n\t\t\t\t\t<h3>Genre: </h3>\n\t\t\t\t\t<p id="genres"> </p>\n\t\t\t\t\t<p><strong>Homepage: </strong> <a href="' + movie.homepage + '">' + movie.homepage + '</a> </p>\n\t\t\t\t\t<p><strong>Release date:</strong> ' + movie.release_date + '</p>\n\t\t\t\t\t<p><strong>Duration: </strong> ' + movie.runtime + ' minutes </p>\n\t\t\t\t\t<h3>Storyline</h3>\n\t\t\t\t\t<p> ' + movie.overview + '</p>\n\t\t\t\t\t<h3>Rating</h3>\n\t\t\t\t\t<p> <span class="stars" data-rating="' + movie.vote_average + '" data-num-stars="10" ></span> </p>\n\t\t\t\t\t\t\t<script>\n\t\t\t\t\t\t\t$.fn.stars = function() {\n\t\t\t\t\t\t\treturn $(this).each(function() {\n\t\t\t\t\t\t\tvar rating = $(this).data("rating");\n\t\t\t\t\t\t\tvar numStars = $(this).data("numStars");\n\t\t\t\t\t\t\tvar fullStar = new Array(Math.floor(rating + 1)).join(\'<i class="fa fa-star"></i>\');\n\t\t\t\t\t\t\tvar halfStar = ((rating%1) !== 0) ? \'<i class="fa fa-star-half-empty"></i>\': \'\';\n\t\t\t\t\t\t\tvar noStar = new Array(Math.floor(numStars + 1 - rating)).join(\'<i class="fa fa-star-o"></i>\');\n\t\t\t\t\t\t\t\t$(this).html(fullStar + halfStar + noStar);\n\t\t\t\t\t\t\t\t});\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t$(\'.stars\').stars();\n\t\t\t\t\t\t</script>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class="col-md-12 img-slider" id="images">\n\t\t\t</div>\n\t\t\t<div class="col-md-12">\n\t\t\t\t<div class="trailer-block" id="trailer">\n            </div>\n            <div class="col-md-12">\n\t\t\t\t<div class="casts" id="casts">\n\t\t\t\t\t<h3>Starring</h3>\n\t\t\t\t</div>\n\t\t\t</div>';
+
 			(0, _utils.$)('#modalInner').html(modalContent);
 			_utils.$.map(genres, function (genre) {
 				var genre = '<a id="genre" class="genre" data-target="#myModal" href=#' + genre.name + '-block>' + genre.name + ' </a> /';
 				(0, _utils.$)('#genres').append(genre);
 			});
-			(0, _utils.$)('#genre').on('click', function (e) {
-				e.preventDefault;
-				var id = (0, _utils.$)(this).attr('href'),
-				    top = (0, _utils.$)(id).offset().top;
-				(0, _utils.$)('#myModal').modal('hide');
-				(0, _utils.$)('body,html').animate({ scrollTop: top }, 1500);
-			});
 		});
-	}
+	};
 
 	function getCastsInfo(movieID) {
 		_axios2.default.get('https://api.themoviedb.org/3/movie/' + movieID + '/credits?api_key=436fedae44d7b81338702a9341ae7a74').then(function (response) {
@@ -1140,7 +1134,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 				}
 			}]
 		});
-	}
+	};
 
 	(0, _utils.$)('#myModal').on('hidden.bs.modal', function () {
 		(0, _utils.$)('#myModal .modal-content').find('#modalInner').attr('src', '');

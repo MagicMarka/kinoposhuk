@@ -8,7 +8,7 @@ var movieID = '',
     movie = {},
     modalContent = '';
 
-$('#movies, #popular, #new, #in_theatres, #action, #drama').on('click', '.movie', function(){
+$('#movies, #popular, #new, #in_theatres, #action, #drama, #comedy').on('click', '.movie', function(){
 	$('#myModal').modal('show');
 	movieID = $(this).data('id');
 	getMovieInfo(movieID);
@@ -70,22 +70,14 @@ function getMovieInfo(movieID) {
 					<h3>Starring</h3>
 				</div>
 			</div>`;
+
 		$('#modalInner').html(modalContent);
 		$.map(genres, function(genre) {
 			var genre = `<a id="genre" class="genre" data-target="#myModal" href=#${genre.name}-block>${genre.name} </a> /`;
 			$('#genres').append(genre);
 		});
-$('#genre').on('click', function(e) {
-	e.preventDefault;
-	var id  = $(this).attr('href'),
-	top = $(id).offset().top;
-	$('#myModal').modal('hide');
-	$('body,html').animate({scrollTop: top}, 1500);
-		
-	});
-
-	})
-}
+				});
+	};
 
 
 function getCastsInfo(movieID) {
@@ -170,7 +162,7 @@ $('.img-slider').slick({
     }
   ]
 });
-}
+};
 
 
 
